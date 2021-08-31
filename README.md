@@ -12,4 +12,4 @@ It has a file storage service from S3 Amazon.
 
 Everything that happened during this consumption of the designed software is registered in a database on the server that is provided.
 
-PS: The security parameters, the appsetings, the key and the sendgrid have not been uploaded for security reasons
+PS: The security parameters will not be uploaded for security reasons
