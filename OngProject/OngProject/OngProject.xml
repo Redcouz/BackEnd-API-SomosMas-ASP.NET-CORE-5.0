@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OngProject</name>
+    </assembly>
+    <members>
+        <member name="M:OngProject.Controllers.CategoryController.Delete(System.Int32)">
+            <summary>
+            Delete a Category from system 
+            </summary>
+            <param name="id">Category Id</param>
+            <returns>Returns a message that a category was removed</returns>
+            <response code="200">Category deleted successfully</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response>
+        </member>
+        <member name="M:OngProject.Controllers.CategoryController.GetById(System.Int32)">
+            <summary>
+            Get a category by id
+            </summary>
+            <returns>return a category by id</returns>
+            <response code="200">Returns the category information</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.CategoryController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Getting all categories paginated
+            </summary>
+            <returns>return the information of all categories</returns>
+            <response code="200">Returns the categories information</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.CategoryController.Post(OngProject.Core.DTOs.CategoryCreateDto)">
+             <summary>
+             Create a category
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /category
+                 {
+                    "Name": "TestName",
+                    "Description": "TestDescription"
+                    "Image": FromFile
+                 }
+             </remarks>
+             <response code="200">Create a category</response>
+             <response code="401">Unauthorized user</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:OngProject.Controllers.CategoryController.Put(OngProject.Core.DTOs.CategoryCreateDto,System.Int32)">
+             <summary>
+             Update a category for id
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 PUT /category/id
+                 {
+                    "Name": "TestName",
+                    "Description": "TestDescription"
+                    "Image": FromFile
+                 }
+             </remarks>
+             <param name="id">Category Id</param>
+             <response code="200">Update a category</response>
+             <response code="401">Unauthorized user</response>
+             <response code="404">Not Found</response>
+        </member>
+        <member name="M:OngProject.Controllers.MemberController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Getting all Members
+            </summary>
+            <returns>return the information of all members</returns>
+            <response code="200">Returns all members information</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.MemberController.Post(OngProject.Core.DTOs.MemberCreateDto)">
+             <summary>
+             Create Member
+             </summary>
+             <remarks>
+             Sample request:
+            
+                  POST /members
+                  {
+                     "Name": "NameExample",
+                     "FacebookUrl": "FacebookExample",
+                     "InstagramUrl": "InstragramExample",
+                     "LinkedinUrl": "LinkedinExample",
+                     "Image": FromFile,
+                     "Description": "DescriptionExample"
+                  }
+             </remarks>
+             <response code="200">Create Member</response>
+             <response code="401">Unauthorized user</response>
+             <response code="400">Bad Request</response> 
+        </member>
+        <member name="M:OngProject.Controllers.MemberController.Delete(System.Int32)">
+            <summary>
+            Delete Member
+            </summary>
+            <param name="id">Member Id</param>
+            <returns>Member could been successfully deleted</returns>
+            <response code="200">Member deleted</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response>
+        </member>
+        <member name="M:OngProject.Controllers.MemberController.Put(System.Int32,OngProject.Core.DTOs.MemberUpdateDto)">
+             <summary>
+             Update a Member by id
+             </summary>
+             <remarks>
+             Sample request:
+            
+                  POST /members
+                  {
+                     "Name": "NameExample",
+                     "FacebookUrl": "FacebookExample",
+                     "InstagramUrl": "InstragramExample",
+                     "LinkedinUrl": "LinkedinExample",
+                     "Image": FromFile,
+                     "Description": "DescriptionExample"
+                  }
+             </remarks>
+             <param name="id">Member Id</param>
+             <returns>Member could been successfully updated</returns>
+             <response code="200">Update Member by Id</response>
+             <response code="401">Unauthorized user</response>
+             <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.NewsController.GetById(System.Int32)">
+            <summary>
+            Getting the news by id
+            </summary>
+            <returns>return the information of news</returns>
+            <response code="200">Returns the news information</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.NewsController.Post(OngProject.Core.DTOs.NewsDto)">
+             <summary>
+             Create a news
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /news
+                 {
+                    "Name": "TestName",
+                    "Content": "TestContent"
+                    "Image": FromFile
+                    "CategoryId": 1
+                 }
+             </remarks>
+             <response code="200">Create a news</response>
+             <response code="401">Unauthorized user</response>
+             <response code="400">Bad Request</response> 
+        </member>
+        <member name="M:OngProject.Controllers.NewsController.Delete(System.Int32)">
+            <summary>
+            Delete a news from the system
+            </summary>
+            <param name="id">News Id</param>
+            <returns>Message that a news has been successfully deleted</returns>
+            <response code="200">News deleted successfully</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response>
+        </member>
+        <member name="M:OngProject.Controllers.NewsController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Getting all the news for pages
+            </summary>
+            <returns>return the information of news</returns>
+            <response code="200">Returns the news information</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.NewsController.Put(System.Int32,OngProject.Core.DTOs.NewsUpdateDto)">
+             <summary>
+             Update a news for id
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 PUT /news/id
+                 {
+                    "Name": "TestName",
+                    "Content": "TestContent"
+                    "Image": FromFile
+                    "CategoryId": 1
+                 }
+             </remarks>
+             <param name="id">News Id</param>
+             <response code="200">Update a news</response>
+             <response code="401">Unauthorized user</response>
+             <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.TestimonialsController.Delete(System.Int32)">
+            <summary>
+            Soft Delete of a testimonial
+            </summary>
+            <param name="id"></param>
+            <returns>Confirmation that the testimonial has been succesfully deleted</returns>
+            <response code = "200">Confirmation of the action</response>
+            <response code = "500">Internar server Error</response>
+        </member>
+        <member name="M:OngProject.Controllers.TestimonialsController.Post(OngProject.Core.DTOs.CreateTestimonialsDto)">
+            <summary>
+            Creates and saves a new testimonial
+            </summary>
+            <param name="testimonialsCreateDto"></param>
+            <returns>Confirmation and model of the created testimonial</returns>
+            <response code = "201">Returns the model created</response>
+            <response code = "400">Bad Request</response>
+        </member>
+        <member name="M:OngProject.Controllers.TestimonialsController.Put(OngProject.Core.DTOs.CreateTestimonialsDto,System.Int32)">
+            <summary>
+            Returns a paginated list of all active testimonials
+            </summary>
+            <param name="page"></param>
+            <param name="sizeByPage"></param>
+            <returns>All testimonials</returns> 
+        </member>
+        <member name="M:OngProject.Controllers.UserController.GetUserData">
+            <summary>
+            Obtaining my information with my access token
+            </summary>
+            <returns>return the information of the authenticated user</returns>
+            <response code="200">Returns the user information</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.UserController.Register(OngProject.Core.DTOs.Auth.RegisterDTO)">
+             <summary>
+             Registration of new users to the system
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /auth/register
+                 {
+                    "firstName": "Administrador",
+                    "lastName": "Sistema",
+                    "email": "mailAdmin@gmail.com",
+                    "password": "123456"
+                 }
+             </remarks>
+             <returns>A new user created with their access token</returns>
+             <response code="200">Returns the newly created user</response>
+             <response code="400">Bad Request</response> 
+        </member>
+        <member name="M:OngProject.Controllers.UserController.Login(OngProject.Core.Services.Auth.LoginDTO)">
+             <summary>
+             Login and return access token
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /auth/login
+                 {
+                    "email": "mail1@Mail.com",
+                    "password": "Admin123"
+                 }
+             </remarks>
+             <returns>A user with their access token</returns>
+             <response code="200">returns a user with his access token</response>
+             <response code="404">Not found user</response> 
+        </member>
+        <member name="M:OngProject.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            Delete a user from the system
+            </summary>
+            <param name="id">User Id</param>
+            <returns>Message that a user has been successfully deleted</returns>
+            <response code="200">User deleted successfully</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">Not Found</response> 
+        </member>
+        <member name="M:OngProject.Controllers.UserController.GetUsers">
+            <summary>
+            Get the data of all registered users
+            </summary>
+            <returns>returns the information of authenticated users</returns>
+            <response code="200">Returns the users information</response>
+            <response code="401">Unauthorized user</response>
+        </member>
+        <member name="M:OngProject.Controllers.UserController.Put(System.Int32,OngProject.Core.DTOs.UserUpdateDto)">
+            <summary>
+            Update a user's information
+            </summary>
+            <param name="id">User Id</param>
+            <param name="userUpdateDto">DTO updated user information</param>
+            <returns>returns the updated information of a user</returns>
+            <response code="200">Return the user information updated</response>
+            <response code="401">Unauthorized user</response>
+            <response code="404">User inexistent</response>
+        </member>
+    </members>
+</doc>
